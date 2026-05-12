@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Diagnosis AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Medical Diagnosis Assistant</h1>
+
+    <form action="/predict" method="post">
+
+        <label>Fever</label>
+        <input type="number" name="fever" min="0" max="1" required>
+
+        <label>Cough</label>
+        <input type="number" name="cough" min="0" max="1" required>
+
+        <label>Headache</label>
+        <input type="number" name="headache" min="0" max="1" required>
+         
+        <label>body pain</label> 
+        <input type="number" name="bodypain" min="0" max="1" required>
+        
+        <button type="submit">Predict</button>
+
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+
+</div>
+
+</body>
+</html>
